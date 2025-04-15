@@ -13,6 +13,13 @@ const transactionSchema = new mongoose.Schema(
       required: true,
     },
 
+    category: {
+      type: String,
+      required: true,
+      default: "Leisure",
+      enum: ["Leisure", "Entertainment", "Medical", "Personal Care", "Study"],
+    },
+
     description: {
       type: String,
       required: true,
